@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { Bgimage } from "@/assets/images/image";
+import { Bgimage } from "../../public/assets/images/image";
 import Categories from "./Categories/page";
 import Link from "next/link";
 export default function Home() {
