@@ -1,10 +1,12 @@
-import React from 'react'
+"use client";
+import React, { useState } from 'react'
 import Link from 'next/link'
 
 export default function Navbar() {
+    const [menuOpen, setMenuOpen] = useState(false);
     return (
         <>
-            <div className="parent w-full h-[80px] flex justify-between align-middle py-5 font-sans md:px-[80px] px-[40px] text-lg">
+            <div className="parent relative w-full h-[80px] flex justify-between align-middle py-5 font-sans md:px-[80px] px-[40px] text-lg z-*">
                 <div className="logo font-extrabold text-2xl md:text-xl">
                     <h1>HOME <span className="text-yellow-400">MEALS</span></h1>
                 </div>
@@ -20,16 +22,18 @@ export default function Navbar() {
                 </div>
 
                 {/* mobile nav menu  */}
-                <div className="md:hidden flex flex-col align-middle justify-center gap-1">
-                    <div className="w-6 h-0.5 rounded-full bg-white transition-all duration-200 ease"></div>
-                    <div className="w-6 h-0.5 rounded-full bg-white transition-all duration-200 ease"></div>
-                    <div className="w-6 h-0.5 rounded-full bg-white transition-all duration-200 ease"></div>
+                <div className="md:hidden flex flex-col align-middle justify-center gap-1" onClick={() => {
+                    setMenuOpen(!menuOpen)
+                }}>
+                    <div className={menuOpen ? "w-6 h-0.5 absolute rotate-[-40deg] rounded-full bg-white transition-all duration-200 ease":"w-6 h-0.5 rounded-full bg-white transition-all duration-200 ease"}></div>
+                    <div className={menuOpen ? "w-6 h-0.5 rounded-full bg-white transition-all duration-200 ease opacity-0":"w-6 h-0.5 rounded-full bg-white transition-all duration-200 ease"}></div>
+                    <div className={menuOpen ? "w-6 h-0.5 absolute rotate-[40deg] rounded-full bg-white transition-all duration-200 ease":"w-6 h-0.5 rounded-full bg-white transition-all duration-200 ease"}></div>
                 </div>
 
             </div>
 
             {/* mobile complte nav menu  */}
-            <div className="backdrop-blur-lg md:hidden font-sans p-10 text-[1.4rem] h-[100vh] w-full absolute top-[80px] z-10">
+            <div className={menuOpen ? "left-[0] translate-all ease-in-out duration-500 backdrop-blur-lg md:hidden font-sans p-10 text-[1.4rem] h-[100vh] w-full absolute z-10" : "left-[-100%] translate-all ease-in-out duration-500 backdrop-blur-lg md:hidden font-sans p-10 text-[1.4rem] h-[100vh] w-full absolute z-10"}>
                 <div className="buttons flex flex-col gap-5">
                     <a href="#" className="hover:text-yellow-500 transition-all ease-in-out duration-500">Home</a>
                     <a href="#" className="hover:text-yellow-500 transition-all ease-in-out duration-500">Menu</a>
