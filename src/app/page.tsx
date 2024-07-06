@@ -9,7 +9,7 @@ export default function Home() {
       {/* Image Container */}
       <div className="absolute inset-0">
         <Image
-          src={Bgimage}
+          src="/assets/images/bg-image.jpg"
           alt="Background Image"
           layout="fill"
           objectFit="cover"
