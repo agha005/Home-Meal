@@ -7,17 +7,17 @@ export default function Navbar() {
     return (
         <>
             <div className="parent relative w-full h-[80px] flex justify-between align-middle py-5 font-sans md:px-[80px] px-[40px] text-lg z-*">
-                <div className="logo font-extrabold text-2xl md:text-xl">
+                <Link href="#" className="logo font-extrabold text-2xl md:text-xl">
                     <h1>HOME <span className="text-yellow-400">MEALS</span></h1>
-                </div>
+                </Link>
                 <div className="buttons hidden md:flex gap-4">
-                    <a href="#" className='hover:text-yellow-500 translate-all ease-in-out duration-500'>Home</a>
-                    <a href="#" className='hover:text-yellow-500 translate-all ease-in-out duration-500'>Menu</a>
-                    <a href="#" className='hover:text-yellow-500 translate-all ease-in-out duration-500'>Categories</a>
-                    <a href="#" className='hover:text-yellow-500 translate-all ease-in-out duration-500'>About</a>
+                    <a href="#" className='hover:text-yellow-400 translate-all ease-in-out duration-500'>Home</a>
+                    <a href="#" className='hover:text-yellow-400 translate-all ease-in-out duration-500'>Menu</a>
+                    <a href="#" className='hover:text-yellow-400 translate-all ease-in-out duration-500'>Categories</a>
+                    <a href="#" className='hover:text-yellow-400 translate-all ease-in-out duration-500'>About</a>
                 </div>
 
-                <div className="form px-3 pb-1 hidden md:flex justify-center items-center hover:bg-orange-400 hover:text-black font-bold text-orange-300 border border-orange-300 rounded-full cursor-pointer  transition-all ease-in-out duration-500">
+                <div className="form px-3 pb-1 hidden md:flex justify-center items-center hover:bg-yellow-400 hover:text-black font-bold text-yellow-400 border border-yellow-400 rounded-full cursor-pointer  transition-all ease-in-out duration-500">
                     <h1>Login/SignUp</h1>
                 </div>
 
@@ -44,7 +44,6 @@ export default function Navbar() {
                     <h1>Login/SignUp</h1>
                 </div>
             </div>
-
         </>
     )
 }
