@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "./globals.css";
 import Navbar from '@/app/Navbar/page'
 import Footer from "./Footer/page";
+import Head from 'next/head';
+import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -18,11 +19,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <Head>
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        />
+      </Head>
       <body className={inter.className}>
         <Navbar />
         {children}
         <Footer />
-        </body>
+      </body>
     </html>
   );
 }

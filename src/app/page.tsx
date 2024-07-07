@@ -1,9 +1,11 @@
 "use client";
+import Link from "next/link";
 import Image from "next/image";
-import { Bgimage } from "../../public/assets/images/image";
 import Cards from "./Cards/page";
 import cardData from "./cardData";
-import Link from "next/link";
+import { Bgimage } from "../../public/assets/images/image";
+import About from "./About/page";
+
 export default function Home() {
   return (
     <>
@@ -38,7 +40,12 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Cards Section */}
+      {/* About us Section */}
+      <div className="w-full h-screen grid items-center justify-center">
+      <About />
+      </div>
+
+      {/* Services Section */}
       <div className="py-24 sm:py-24 w-[100%]">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
 
@@ -56,8 +63,7 @@ export default function Home() {
                 cardTitle2={val.title2}
                 cardDis={val.cardDis}
               />
-            ))}
-
+            ))};
           </div>
 
         </div>
