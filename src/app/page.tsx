@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
-import { Bgimage } from "../../public/images/image";
 import Cards from "./cards/page";
+import { Bgimage } from "../../public/assets/images/image";
 import cardData from "./cardData";
 import Link from "next/link";
 export default function Home() {
@@ -38,6 +38,7 @@ export default function Home() {
         </div>
       </div>
 
+      {/* Cards Section */}
       <div className="py-24 sm:py-24 w-[100%]">
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
 

@@ -24,7 +24,7 @@ const Cards: React.FC<CardsProps> = ({ cardImageSrc, cardTitle, cardDis }) => {
                 <div className="relative p-4 sm:p-6 lg:p-8">
                     <p className="text-[1rem] font-semibold uppercase tracking-widest text-yellow-500">{cardTitle}</p>
                     <div className="mt-32 sm:mt-48 lg:mt-64">
-                        <div className="translate-y-8 transform opacity-0 transition-all group-hover:translate-y-[-100%] group-hover:opacity-100">
+                        <div className="translate-y-8 transform opacity-0 transition-all group-hover:translate-y-[-30%] group-hover:opacity-100">
                             <p className="text-sm text-white">{cardDis}</p>
                         </div>
                     </div>
