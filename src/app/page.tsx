@@ -60,7 +60,6 @@ export default function Home() {
                 key={index}
                 cardImageSrc={val.cardImageSrc}
                 cardTitle={val.title1}
-                cardTitle2={val.title2}
                 cardDis={val.cardDis}
               />
             ))};
