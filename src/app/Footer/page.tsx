@@ -45,7 +45,7 @@ export default function Footer() {
                 </div>
 
                 <div className="w-full sm:mt-5 md:mt-0">
-                    <h3 className="text-lg font-semibold text-yellow-400">Subscribe More Info</h3>
+                    <h3 className="text-lg font-semibold text-yellow-400">We are waiting for your Feed</h3>
                     <div className="mt-4">
                         <div className="flex items-center bg-white rounded-lg px-2 py-1">
                             <input
