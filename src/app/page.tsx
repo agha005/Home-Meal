@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import { Bgimage } from "../../public/assets/images/image";
+import { Bgimage } from "../../public/images/image";
 import Cards from "./cards/page";
 import cardData from "./cardData";
 import Link from "next/link";
@@ -52,7 +52,6 @@ export default function Home() {
                 key={index}
                 cardImageSrc={val.cardImageSrc}
                 cardTitle={val.title1}
-                cardTitle2={val.title2}
                 cardDis={val.cardDis}
               />
             ))}
