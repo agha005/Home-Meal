@@ -52,6 +52,7 @@ export default function Footer() {
                                 type="text"
                                 placeholder="Enter your Name"
                                 className="bg-transparent focus:outline-none text-black"
+                                required
                             />
                         </div>
                         <div className="flex items-center bg-white rounded-lg px-2 py-1 mt-3">
@@ -60,12 +61,14 @@ export default function Footer() {
                                 type="email"
                                 placeholder="Enter your Email"
                                 className="bg-transparent focus:outline-none text-black"
+                                required
                             />
                         </div>
                         <div className="mt-3 rounded-full">
                             <textarea
                                 placeholder="Your Message"
                                 className="bg-transparent rounded-lg focus:outline-none text-black bg-white w-full h-32 resize-none p-2"
+                                required
                             />
                         </div> 
                         <button className="mt-2 duration-300 font-bold bg-yellow-400 border border-yellow-400 hover:bg-black hover:text-yellow-400 text-black px-4 py-1 rounded-lg  w-full">Subscribe</button>
